@@ -4,8 +4,11 @@ Krom, kişisel bloglar için tasarlanmış mobile-first responsive WordPress tem
 ## Geliştiriliyor...
 Henüz herkese açık bloglar için kullanılabilir değil.
 
+Kaynağı arşiv olarak indirir ve test ederek geri bildirimde bulunursanız çok minnettar olurum.
+
 ## Telif Hakkı ve Lisans
 Telif hakkı &copy; 2014 [Burak Garcı](http://burakgarci.net)
+
 Aşağıda belirtilenler dışında kalan tüm tema unsurları **GNU Genel Kamu Lisansı v3** altında dağıtılmıştır.
 
 * [Open Sans](http://www.google.com/fonts/specimen/Open+Sans) Steve Matteson tarafından tasarlandı ve  **Apache Lisansı, Sürüm 2.0** altında dağıtıldı.
