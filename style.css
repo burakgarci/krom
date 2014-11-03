@@ -22,9 +22,8 @@ Bu programla birlikte GNU Genel Kamu Lisansı’nın bir kopyasını elde etmiş
 
 /* İşte bunu seviyorum! */
 *, *:before, *:after, *:focus {
-	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	outline: none;
 }
