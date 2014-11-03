@@ -74,7 +74,10 @@
 		color: #444;
 		cursor: text;
 		opacity: .8;
-		transition: width .2s ease, opacity .2s ease; /* Evet, sadece üzerine gelindiğinde çalışacak. */
+		transition: width .2s ease, opacity .2s ease; /* Evet, sadece odaklanıldığında çalışacak. */
+		-o-transition: width .2s ease, opacity .2s ease;
+		-moz-transition: width .2s ease, opacity .2s ease;
+		-webkit-transition: width .2s ease, opacity .2s ease;
 		width: 100%;
 	}
 	#ust-arama-butonu {
@@ -87,6 +90,9 @@
 		padding: 0;
 		opacity: 0;
 		transition: all .2s ease;
+		-o-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-webkit-transition: all .2s ease;
 		visibility: hidden;
 		position: absolute;
 		margin-top: -10px;
@@ -180,6 +186,9 @@
 		visibility: hidden;
 		bottom: 0;
 		transition: bottom .2s ease;
+		-o-transition: bottom .2s ease;
+		-moz-transition: bottom .2s ease;
+		-webkit-transition: bottom .2s ease;
 	}
 	.gallery-item:hover .gallery-caption {
 		visibility: visible;

@@ -723,6 +723,9 @@ textarea#comment {
 	text-align: left;
 	border: none !important;
 	transition:opacity .2s ease;
+	-o-transition:opacity .2s ease;
+	-moz-transition:opacity .2s ease;
+	-webkit-transition:opacity .2s ease;
 }
 .sosyal-menu li a:not(:hover) {
 	opacity: .5;
