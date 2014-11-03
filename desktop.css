@@ -1,3 +1,6 @@
+/*
+ * 768 pikselden büyük genişliği sahip cihazlar için biçimlendirme
+ */
 @media screen and (min-width: 768px) {
 
 	body {
@@ -163,6 +166,10 @@
 		height: auto;
 		border-radius: 2px
 	}
+
+	/*
+	 * WordPress galeri biçimlendirmesi
+	 */
 	.wp-caption {
 		position: relative;
 	}
@@ -194,6 +201,10 @@
 		visibility: visible;
 		bottom: 10px;
 	}
+
+	/*
+	 * Yerleşimler için biçimlendirme
+	 */
 	.tek-dar .tut {
 		max-width: 740px;
 	}

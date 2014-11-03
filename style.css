@@ -20,15 +20,24 @@ Bu programla birlikte GNU Genel Kamu Lisansı’nın bir kopyasını elde etmiş
 
 */
 
-/* İşte bunu seviyorum! */
+
+/* ======== BİRİNCİL BİÇİMLENDİRME DOSYASI ======== */
+
+
+/*
+ * İşte bunu seviyorum! :)
+ * Şuradan kutu boyutlandırma hakkında daha fazla bilgilenebilirsiniz:
+ * http://fatihhayrioglu.com/css3-box-sizing-ozelligi/
+ */
 *, *:before, *:after, *:focus {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	outline: none;
 }
 
-/* Form elemanları */
+/*
+ * Form elemanları; button, input, select, textarea...
+ */
 
 button,
 input,
@@ -145,7 +154,9 @@ textarea {
 	width: 100%;
 }
 
-/*************************/
+/*
+* Genel biçimlendirme
+*/
 
 html {
 	overflow-y: scroll;
@@ -361,7 +372,9 @@ a:not(:hover) {
 }
 
 
-/* üst bölge */
+/*
+ * Üst kısım biçimlendirmesi
+ */
 
 #logo {
 	font-size: 1.5rem;
@@ -480,7 +493,9 @@ a:not(:hover) {
 	display: block;
 }
 
-/* Gövde */
+/*
+ * Site gövdesi/içerik kısmı biçimlendirmesi
+ */
 
 #ana {
 	padding: 0 5px;
@@ -579,7 +594,9 @@ a:not(:hover) {
 	color: #000;
 }
 
-/* Alt bölüm */
+/*
+ * Alt kısım biçimlendirmesi
+ */
 #alt {
 	padding: 5px;
 	background: #444;
@@ -592,7 +609,9 @@ a:not(:hover) {
 	border-bottom: 1px dotted #aaa;
 }
 
-/* Yorumlar */
+/*
+ * Yorumlar bölümü; yorum formu ve yorum listesi
+ */
 .yorum-listesi {
 	list-style-type: none;
 	padding: 0;
@@ -677,7 +696,9 @@ textarea#comment {
     border-left: 2px solid #aaa;
 }
 
-/* Sosyal menü */
+/*
+ * Sosyal menü biçimlendirmesi
+ */
 .sosyal-menu li a[href*="behance.net"] { background-position: -1px -0px; width: 32px; height: 32px; }
 .sosyal-menu li a[href*="blogger.com"],
 .sosyal-menu li a[href*="blogspot.com"] { background-position: -34px -0px; width: 32px; height: 32px; }
@@ -731,7 +752,11 @@ textarea#comment {
 	opacity: .5;
 }
 
-/* Rastgele kutu üst kenarlık rengi */
+/*
+ * Yazı ve arşiv sayfasındaki özet kutuları, yazı ve sayfaları tutan içerik kutuları için
+ * rastgele seçilmek üzere kenarlık renkleri
+ * functions.php dosyasında kenarlik_renklerini_uygula() fonksiyonu ile uygulanır
+ */
 .kenarlik-000000 { border-top-color: #000000 !important }
 .kenarlik-000080 { border-top-color: #000080 !important }
 .kenarlik-0000ff { border-top-color: #0000ff !important }
