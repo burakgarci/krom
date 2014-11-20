@@ -25,6 +25,62 @@ Bu programla birlikte GNU Genel Kamu Lisansı’nın bir kopyasını elde etmiş
 
 
 /*
+ * Google Fonts'dan yazi tiplerini çek
+ */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTRUOjZSKWg4xBWp_C_qQx0o.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/u-WUoqrET9fUeobQW7jkRVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzBUOjZSKWg4xBWp_C_qQx0o.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/*
  * İşte bunu seviyorum! :)
  * Şuradan kutu boyutlandırma hakkında daha fazla bilgilenebilirsiniz:
  * http://fatihhayrioglu.com/css3-box-sizing-ozelligi/
@@ -33,6 +89,7 @@ Bu programla birlikte GNU Genel Kamu Lisansı’nın bir kopyasını elde etmiş
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	outline: none;
 }
 
 /*
@@ -55,11 +112,11 @@ input[type="submit"] {
 	border-color: #ddd;
 	border-radius: 2px;
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(top,#fff,#eee);
-	background-image: -moz-linear-gradient(top,#fff,#eee);
-	background-image: -ms-linear-gradient(top,#fff,#eee);
-	background-image: -o-linear-gradient(top,#fff,#eee);
-	background-image: linear-gradient(top,#fff,#eee);
+	background-image: -webkit-linear-gradient(#fff,#eee);
+	background-image: -moz-linear-gradient(#fff,#eee);
+	background-image: -ms-linear-gradient(#fff,#eee);
+	background-image: -o-linear-gradient(#fff,#eee);
+	background-image: linear-gradient(#fff,#eee);
 	color: #222;
 	cursor: pointer;
 	-webkit-appearance: button;
@@ -73,28 +130,28 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #bbb;
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(top,#fff,#e5e5e5);
-	background-image: -moz-linear-gradient(top,#fff,#e5e5e5);
-	background-image: -ms-linear-gradient(top,#fff,#e5e5e5);
-	background-image: -o-linear-gradient(top,#fff,#e5e5e5);
-	background-image: linear-gradient(top,#fff,#e5e5e5);
+	background-image: -webkit-linear-gradient(#fff,#e5e5e5);
+	background-image: -moz-linear-gradient(#fff,#e5e5e5);
+	background-image: -ms-linear-gradient(#fff,#e5e5e5);
+	background-image: -o-linear-gradient(#fff,#e5e5e5);
+	background-image: linear-gradient(#fff,#e5e5e5);
 }
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
 button:active,
+button:focus,
 input[type="button"]:active,
+input[type="button"]:focus,
 input[type="reset"]:active,
-input[type="submit"]:active {
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
 	border-color: #999;
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(top,#fff,#ddd);
-	background-image: -moz-linear-gradient(top,#fff,#ddd);
-	background-image: -ms-linear-gradient(top,#fff,#ddd);
-	background-image: -o-linear-gradient(top,#fff,#ddd);
-	background-image: linear-gradient(top,#fff,#ddd);
+	background-image: -webkit-linear-gradient(#fff,#ddd);
+	background-image: -moz-linear-gradient(#fff,#ddd);
+	background-image: -ms-linear-gradient(#fff,#ddd);
+	background-image: -o-linear-gradient(#fff,#ddd);
+	background-image: linear-gradient(#fff,#ddd);
 }
 
 input[type="checkbox"],
@@ -112,36 +169,35 @@ input[type="search"]::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	toolbar-buttons/ */
 	border: 0;
 	padding: 0;
 }
 
-input[type="text"],
 input[type="email"],
-input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="text"],
+input[type="url"],
 textarea {
 	color: #666;
 	border: 1px solid #eee;
 	border-radius: 2px;
 }
 
-input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
 textarea:focus {
 	color: #000;
 	border-bottom-color: #dd4b4c;
 }
 
-input[type="text"],
 input[type="email"],
-input[type="url"],
 input[type="password"],
+input[type="text"],
+input[type="url"],
 input[type="search"] {
 	padding: 5px;
 	line-height: 20px;
@@ -187,26 +243,6 @@ h6,
 #logo,
 .ana-menu {
 	font-family: 'Open Sans', 'Droid Sans', Arial, sans-serif;
-}
-::selection {
-	color: #fff;
-	background: #dd4b4c
-}
-::-moz-selection {
-	background: #dd4b4c;
-	color: #fff
-}
-::-webkit-scrollbar {
-	width: 10px;
-}
-::-webkit-scrollbar-track {
-	background-color: #eaeaea;
-}
-::-webkit-scrollbar-thumb {
-	background-color: #ccc;
-}
-::-webkit-scrollbar-thumb:hover {
-	background-color: #aaa;
 }
 img {
 	max-width: 100%;
@@ -345,9 +381,6 @@ var:before {
 }
 .clear:after {
 	clear: both;
-}
-.clear {
-	*zoom: 1;
 }
 hr {
 	border: none;
@@ -504,7 +537,6 @@ a:not(:hover) {
 .kutu, #respond {
 	padding: 10px;
 	margin: 20px auto;
-	/*border: 1px solid #e2e2e2;*/
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	border-top: 5px solid #d8d8d8;
 	border-radius: 3px;
@@ -517,7 +549,7 @@ a:not(:hover) {
 .kutu-baslik, #reply-title {
 	color: #555;
 	font-size: 18px;
-	border-bottom: 1px solid #eee;
+	box-shadow: 0px 2px 2px -3px #888;
 	margin: 0 0 10px 0;
 	padding-bottom: 5px;
 	font-weight: normal;
@@ -537,9 +569,8 @@ a:not(:hover) {
 }
 .yazi-bilgileri {
 	margin: 10px -10px -10px -10px;
-	background: rgba(255, 255, 255, 0.4);
 	padding: 0 10px;
-	border-top: 1px solid #dedede;
+	box-shadow: 0 0 1px -1px #888;
 }
 .yazi-bilgileri a:not(:hover) {
 	color: #aaa;
@@ -636,11 +667,11 @@ a:not(:hover) {
 	padding: 1px 5px;
 	border-bottom: 1px solid #ddd;
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(top,#fff,#eee);
-	background-image: -moz-linear-gradient(top,#fff,#eee);
-	background-image: -ms-linear-gradient(top,#fff,#eee);
-	background-image: -o-linear-gradient(top,#fff,#eee);
-	background-image: linear-gradient(top,#fff,#eee);
+	background-image: -webkit-linear-gradient(#fff,#eee);
+	background-image: -moz-linear-gradient(#fff,#eee);
+	background-image: -ms-linear-gradient(#fff,#eee);
+	background-image: -o-linear-gradient(#fff,#eee);
+	background-image: linear-gradient(#fff,#eee);
 }
 
 .yorum-yazari,
@@ -784,3 +815,268 @@ textarea#comment {
 .kenarlik-ff00ff { border-top-color: #ff00ff !important }
 .kenarlik-ffff00 { border-top-color: #ffff00 !important }
 .kenarlik-ffffff { border-top-color: #ffffff !important }
+
+
+/*
+ * 768 pikselden büyük genişliği sahip cihazlar için biçimlendirme
+ */
+@media screen and (min-width: 768px) {
+
+	body {
+		font-size: 12px;
+	}
+	.tut {
+		width: 100%;
+		margin: 0 auto;
+	}
+	#ust {
+		background: transparent url(images/ust/ust.jpg) no-repeat center;
+		background-size: cover;
+	}
+	#ust > .tut {
+		height: 160px;
+	}
+	#logo {
+		line-height: 160px;
+		font-size: 3rem;
+		font-weight: 300;
+		margin-right: -250px;
+		padding: 0 0 0 5px;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+		width: 100%;
+	}
+	#logo > img {
+		height: auto;
+		max-height: 65px;
+		margin-top: 47px
+	}
+	#logo a:not(:hover) {
+		color: #fff;
+	}
+	#logo a:hover {
+		text-decoration: none;
+	}
+	#ust-arama-gecis,
+	#ana-menu-gecis {
+		display: none;
+	}
+	#ana-navigasyon {
+		box-shadow: 0 1px 5px -2px #000;
+	}
+	.ana-menu {
+		display: block !important;
+		position: static;
+		border: none;
+	}
+	#ust-arama {
+		display: block !important;
+		float: right;
+		margin-top: 54px;
+		border: none;
+		width: 250px;
+		clear: none;
+	}
+	#ust-arama-metni {
+		background: #fff url(images/ara.png) no-repeat center;
+		border-color: transparent;
+		border-radius: 50%;
+		color: transparent;
+		cursor: pointer;
+		float: right;
+		height: 32px;
+		line-height: 16px;
+		opacity: .6;
+		width: 32px;
+	}
+	#ust-arama-metni:focus{
+		background-color: #fff;
+		background-image: none;
+		border-color: #eee;
+		border-radius: 3px;
+		color: #444;
+		cursor: text;
+		opacity: .8;
+		/* Evet, sadece odaklanıldığında çalışacak. */
+		transition: width .2s ease, opacity .2s ease;
+		-o-transition: width .2s ease, opacity .2s ease;
+		-moz-transition: width .2s ease, opacity .2s ease;
+		-webkit-transition: width .2s ease, opacity .2s ease;
+		width: 100%;
+	}
+	#ust-arama-butonu {
+		display: none;
+	}
+	.ana-menu li {
+		float: left;
+	}
+	.ana-menu .sub-menu {
+		padding: 0;
+		opacity: 0;
+		transition: all .2s ease;
+		-o-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-webkit-transition: all .2s ease;
+		visibility: hidden;
+		position: absolute;
+		margin-top: -10px;
+	}
+	.ana-menu a {
+		background: #3E3E3E;
+		padding: 0 10px;
+		color: #ccc;
+		border-bottom: none;
+	}
+	.ana-menu .menu-item-has-children {
+		border-bottom: none;
+	}
+	.ana-menu .current-menu-item > a {
+		border-left: none;
+		padding-left: 10px;
+		color: #fff;
+		background: #3E3E3E;
+	}
+	.ana-menu a:hover {
+		text-decoration: none;
+		color: #fff
+	}
+	.ana-menu .menu-item-has-children:hover > .sub-menu {
+		display: block;
+		visibility: visible;
+		opacity: 1;
+		margin-top: 0;
+		border-top: 1px solid #4688AF;
+		box-shadow: 0 3px 5px -2px #000
+	}
+	.ana-menu .sub-menu li {
+		float: none;
+	}
+	.ana-menu .sub-menu a {
+		border-left: none;
+		line-height: 37px;
+	}
+	#sosyal-ikonlar a:first-child {
+		margin-left: 0;
+	}
+	#sosyal-ikonlar a {
+		opacity: .5;
+	}
+	#sosyal-ikonlar a:hover {
+		opacity: 1;
+	}
+	.yorum .avatar {
+		width: 60px;
+	}
+	.yorum-sag {
+		margin-left: 70px;
+		min-height: 70px;
+	}
+	.yorum-ust-sag {
+		float: right;
+		clear: right;
+	}
+	.ozet .yazi-gorseli {
+		display: block;
+		float: left;
+	}
+	.ozet .yazi-gorseli + .yazi-icerigi {
+		margin-left: 160px;
+	}
+	.ozet .yazi-gorseli img {
+		width: 150px;
+		height: auto;
+		border-radius: 2px
+	}
+
+	/*
+	 * WordPress galeri biçimlendirmesi
+	 */
+	.wp-caption {
+		position: relative;
+	}
+	.wp-caption-text,
+	.gallery-caption {
+		position: absolute;
+		bottom: 10px;
+		margin: 0;
+		background: rgba(255, 255, 255, 0.53);
+		color: white;
+		text-shadow: 0 0 5px #000;
+	}
+	.gallery-item {
+		position: relative;
+		word-wrap: break-word;
+		overflow: hidden;
+		display: inline-block;
+		margin: 0 10px 10px 0;
+	}
+	.gallery-caption {
+		visibility: hidden;
+		bottom: 0;
+		transition: bottom .2s ease;
+		-o-transition: bottom .2s ease;
+		-moz-transition: bottom .2s ease;
+		-webkit-transition: bottom .2s ease;
+	}
+	.gallery-item:hover .gallery-caption {
+		visibility: visible;
+		bottom: 10px;
+	}
+
+	/*
+	 * Yerleşimler için biçimlendirme
+	 */
+	.tek-dar .tut {
+		max-width: 740px;
+	}
+	.tek-normal .tut {
+		max-width: 940px;
+	}
+	.tek-genis .tut {
+		max-width: 1120px;
+	}
+	.icerik-yan #ana-icerik {
+		width: 64.6484375%;
+		float: left;
+	}
+	.icerik-yan #kenar-icerik {
+		width: 33.4821428%;
+		float: right;
+	}
+	.icerik-yan .tut {
+		max-width: 1120px;
+	}
+	.yan-icerik #ana-icerik {
+		width: 64.6484375%;
+		float: right;
+	}
+	.yan-icerik #kenar-icerik {
+		width: 33.4821428%;
+		float: left;
+	}
+	.yan-icerik .tut {
+		max-width: 1120px;
+	}
+	.tek-dar #kenar-icerik,
+	.tek-normal #kenar-icerik,
+	.tek-genis #kenar-icerik {
+		margin-top: 20px;
+		column-count: 2;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-gap: 20px;
+		-moz-column-gap: 20px;
+		-webkit-column-gap: 20px;
+	}
+	.tek-dar #kenar-icerik > .kutu,
+	.tek-normal #kenar-icerik > .kutu,
+	.tek-genis #kenar-icerik > .kutu {
+		margin-top: 0;
+	}
+	.tek-dar #kenar-icerik .kutu,
+	.tek-normal #kenar-icerik .kutu,
+	.tek-genis #kenar-icerik .kutu {
+		column-break-inside: avoid;
+		-moz-column-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+	}
+}
