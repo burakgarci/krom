@@ -503,21 +503,36 @@ add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
 
+/*
+ * Sayfa oluşturulmasını geciktirmemek için sayfa altındaki scriptlere defer niteliği ekle.
+ */
+function defer_niteligi_ekle ( $url ) {
+	if ( FALSE === strpos( $url, '.js' ) ) {
+		return $url;
+	}
+	if ( strpos( $url, '/jquery' ) ) {
+		return $url;
+	}
+	return "$url' defer='defer"; # Tırnaklarda bir sıkıntı yok.
+}
+add_filter( 'clean_url', 'defer_niteligi_ekle', 11, 1 );
+
+
 /**
  * Stilleri ve scriptleri ekle
  */
 function stiller_ve_scriptler() {
-	wp_enqueue_style( 'google_fonts-open_sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,latin-ext' );
-	wp_enqueue_style( 'anastil', esc_url( get_stylesheet_uri() ), array(), '1.0.0', 'screen'  );
-	wp_enqueue_style( 'genisstil', esc_url( get_stylesheet_directory_uri() ).'/desktop.css', array(), '1.0.0', 'screen'  );
 
+	// SCRIPT_DEBUG açılmışsa .min kullanma 
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	wp_enqueue_style( 'anastil', esc_url( get_stylesheet_directory_uri() )."/style$suffix.css", array(), '1.0.0', 'screen'  );
 	wp_enqueue_script( 'jquery-1.11.1.min.js', esc_url( get_template_directory_uri() ).'/js/jquery-1.11.1.min.js', array(), '1.11.1', true );
-	wp_enqueue_script( 'script.js', esc_url( get_template_directory_uri() ).'/js/script.js', array(), '1.0.0', true );
-	if ( is_singular() ) {
-		wp_enqueue_script( "comment-reply" );
-	}
+	wp_enqueue_script( 'script.js', esc_url( get_template_directory_uri() )."/js/script{$suffix}.js", array(), '1.0.0', true );
+	if ( is_singular() ) { wp_enqueue_script( "comment-reply" ); }
+
 }
 add_action( 'wp_enqueue_scripts', 'stiller_ve_scriptler' );
+
 
 /**
  * Yazı boş mu değil mi
