@@ -24,8 +24,15 @@ Bu programla birlikte GNU Genel Kamu Lisansı’nın bir kopyasını elde etmiş
 /* ======== BİRİNCİL BİÇİMLENDİRME DOSYASI ======== */
 
 
+/* == Geliştiriye Not ==
+ * style.css sadece "SCRIPT_DEBUG", wp-config.php dosyasında "true" olarak tanımlanmışsa çağırılır.
+ * Bu temayı yüklediğiniz site herkese açıksa, bu dosyayı düzenleyin ve sıkıştırılmış halini style.min.css olarak kaydedin.
+ * Herkese açık bir sitede bu dosyayı çağırmak için "SCRIPT_DEBUG" sabitini "true" olarak tanımlaMAyın. 
+*/
+
+
 /*
- * Google Fonts'dan yazi tiplerini çek
+ * Google Fonts'dan yazi tiplerini getir
  */
 
 /* latin-ext */
@@ -912,10 +919,6 @@ textarea#comment {
 	.ana-menu .sub-menu {
 		padding: 0;
 		opacity: 0;
-		transition: all .2s ease;
-		-o-transition: all .2s ease;
-		-moz-transition: all .2s ease;
-		-webkit-transition: all .2s ease;
 		visibility: hidden;
 		position: absolute;
 		margin-top: -10px;
@@ -945,7 +948,15 @@ textarea#comment {
 		opacity: 1;
 		margin-top: 0;
 		border-top: 1px solid #4688AF;
-		box-shadow: 0 3px 5px -2px #000
+		box-shadow: 0 3px 5px -2px #000;
+		/*
+		 * transition burada (:hover) çünkü sadece açılı menü üzerine gelindiğinde çalışması gerekiyor, üzerinden ayrılındığında değil. 
+		 * Bazılarımız bunu yanlış kullanım olarak değerlendirse de ben öyle düşünmüyorum; transition benim işimi böyle görüyor, sorun yok.
+		*/
+		transition: all .2s ease;
+		-o-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-webkit-transition: all .2s ease;
 	}
 	.ana-menu .sub-menu li {
 		float: none;
