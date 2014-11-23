@@ -1,3 +1,9 @@
+/* == Geliştiriye Not ==
+ * script.js sadece "SCRIPT_DEBUG", wp-config.php dosyasında "true" olarak tanımlanmışsa çağırılır.
+ * Bu temayı yüklediğiniz site herkese açıksa, bu dosyayı düzenleyin ve sıkıştırılmış halini script.min.js olarak kaydedin.
+ * Herkese açık bir sitede bu dosyayı çağırmak için "SCRIPT_DEBUG" sabitini "true" olarak tanımlaMAyın. 
+*/
+
 // "selectText" kaynağı: http://stackoverflow.com/questions/985272/
 // Kodun aynısı adreste olmayabilir; yazar cevabını değiştirmiş olabilir.
 jQuery.fn.selectText = function () {
