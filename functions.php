@@ -177,7 +177,7 @@ function krom_theme_customizer( $wp_customize ) {
 	$wp_customize->add_section( 'krom_ayarlari' , array(
 				'title'       => 'Krom Ayarları',
 				'priority'    => 0,
-				'description' => 'Tema ile ilgili çeşitli ayarlar. Ayarlama yapmadan <span style="color:#f10">önce yardım dökümanlarını okuyun.</span>',
+				'description' => 'Tema ile ilgili çeşitli ayarlar. Ayarlama yapmadan önce <a href="'.get_template_directory_uri().'/YARDIM.html" style="color:#f10;text-decoration:underline" target="_blank">yardım dökümanları</a>nı okuyun.',
 				) );
 
 	/**
