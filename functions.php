@@ -308,7 +308,7 @@ function krom_theme_customizer( $wp_customize ) {
 	 * Kutu üst kenarlık rengi
 	 */
     $wp_customize->add_setting('kroma_kutu_kenarlik_rengi', array(
-        'default'           => '#d8d8d8',
+        'default'           => '#3e3e3e',
         'sanitize_callback' => 'kroma_kontrol',
         'capability'        => 'edit_theme_options',
 
@@ -353,7 +353,7 @@ function ozel_renkleri_uygula(){
 		.kutu,
 		#respond {
 			background-color: <?php echo get_theme_mod('kroma_kutu_arkaplan_rengi', '#f9f9f9') ?>;
-			border-top-color: <?php echo get_theme_mod('kroma_kutu_kenarlik_rengi', '#d8d8d8') ?>;
+			border-top-color: <?php echo get_theme_mod('kroma_kutu_kenarlik_rengi', '#3e3e3e') ?>;
 		}
 
 		.kutu,
@@ -390,7 +390,7 @@ function kroma_kontrol( $value ){
  * Özel arkaplan desteği ekle
  */
 $defaults = array(
-                  'default-color'		=> 'f5f5f5',
+                  'default-color'		=> 'efefef',
                   );
 add_theme_support( 'custom-background', $defaults );
 

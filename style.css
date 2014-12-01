@@ -238,7 +238,7 @@ body {
 	font: 14px Verdana, Geneva, sans-serif;
 	line-height: 24px;
 	width: 100%;
-	background: #f5f5f5;
+	background: #efefef;
 	min-width: 208px;
 }
 h1,
@@ -545,7 +545,7 @@ a:not(:hover) {
 	padding: 10px;
 	margin: 20px auto;
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	border-top: 5px solid #d8d8d8;
+	border-top: 5px solid #3e3e3e;
 	border-radius: 3px;
 	background: #f9f9f9;
 	color: #666;
