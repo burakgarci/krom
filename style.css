@@ -638,7 +638,7 @@ a:not(:hover) {
  */
 #alt {
 	padding: 5px;
-	background: #444;
+	background: #3e3e3e;
 	color: #eee;
 	border-top: 3px solid #dd4b4c;
 	margin-top: 20px;
