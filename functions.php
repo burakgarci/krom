@@ -496,6 +496,7 @@ register_nav_menu('sosyal-menu', 'Sosyal Menü');
  * Öne çıkarılmıış görsel desteği
  */
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+set_post_thumbnail_size( 150, 150 );
 
 /**
  * Gerkesiz şeyler :)
