@@ -3,7 +3,7 @@
  *
  * Krom fonksiyonlar, ayarlar, tanımlamalar
  *
- * "kroma" kısaltması "krom ayar" için olarak kullanmıştır.
+ * "kroma" kısaltması "krom ayar" için kullanmıştır.
  *
  */
 
