@@ -1,7 +1,7 @@
 /*
 Theme Name: Krom
 Description: Krom, kişisel bloglar için tasarlanmış <a href="http://www.html5rocks.com/en/mobile/responsivedesign/" target="_blank">mobile-first responsive</a> tema... Dar tek sütun, normal tek sütun, geniş tek sütun, içerik + yan sütun ve yan sütun + içerik olmak üzere 5 yerleşim biçimine sahip. Ayrıca tema üst kısım ve arkaplan özelleştirmesi de destekliyor.
-Version: 14.10
+Version: 1.0
 Author: Burak Garcı
 Author URI: http://burakgarci.net/
 License: GNU Genel Kamu Lisansı v3
@@ -1086,8 +1086,8 @@ textarea#comment {
 	.tek-dar #kenar-icerik .kutu,
 	.tek-normal #kenar-icerik .kutu,
 	.tek-genis #kenar-icerik .kutu {
-		column-break-inside: avoid;
-		-moz-column-break-inside: avoid;
 		-webkit-column-break-inside: avoid;
+				  page-break-inside: avoid; 
+					   break-inside: avoid;
 	}
 }
